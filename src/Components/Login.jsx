@@ -108,7 +108,7 @@ const Login = () => {
             <Typography component="h1" variant="h5">
               Sign in
             </Typography>
-            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width: '50%' }}>
+            <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1, width: '70%' }}>
               {errors !== "" && <Alert severity="error">{errors}!</Alert>}
               {success !== "" && <Alert severity="success">{success}</Alert>}
               <form>
