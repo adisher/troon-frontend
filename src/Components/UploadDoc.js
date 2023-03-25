@@ -30,6 +30,7 @@ const UploadDoc = () => {
                 {
                     headers: {
                         "Content-Type": "multipart/form-data",
+                        "Authorization": `Bearer ${user?.token}`
                     },
                 }
             );
@@ -130,7 +131,7 @@ const UploadDoc = () => {
                                     formdata={formdata}
                                     handleChange={handleChange}
                                 />
-                                <input type="file" onChange={handleUploadImage}></input>
+                                <input type="file" onChange={handleUploadImage} accept="image/*"></input>
                                 <Box sx={{ display: "flex", justifyContent: "flex-end" }}>
                                     <Box sx={{ display: "inline-flex", width: "50%", textAlign: "right", marginLeft: "auto" }}>
                                         <Button variant="contained" onClick={handleAssignUpload}>
